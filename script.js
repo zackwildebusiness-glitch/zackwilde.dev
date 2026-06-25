@@ -26,7 +26,7 @@ function closeLightbox() {
 syncHeader();
 window.addEventListener("scroll", syncHeader, { passive: true });
 
-document.querySelectorAll(".project-media").forEach((link) => {
+document.querySelectorAll(".project-media, .mini-shot").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     openLightbox(link);
