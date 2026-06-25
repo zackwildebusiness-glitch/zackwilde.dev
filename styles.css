@@ -510,6 +510,50 @@ h3 {
   text-decoration: none;
 }
 
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: clamp(14px, 3vw, 34px);
+  background: rgba(10, 14, 12, 0.82);
+}
+
+.lightbox img {
+  width: auto;
+  max-width: min(96vw, 1500px);
+  max-height: 88vh;
+  object-fit: contain;
+  background: #f2eadb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  min-height: 42px;
+  padding: 10px 14px;
+  color: #fff;
+  background: rgba(15, 22, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  background: #0f1612;
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
