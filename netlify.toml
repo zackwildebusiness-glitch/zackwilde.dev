@@ -8,6 +8,13 @@
   to = "/demos/fintrack/index.html"
   status = 200
 
+# Daily 60 live demo is an Expo Router SPA (web export) under /demos/daily60/.
+# Send unknown sub-paths to its index.html so client-side routing can handle them.
+[[redirects]]
+  from = "/demos/daily60/*"
+  to = "/demos/daily60/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
