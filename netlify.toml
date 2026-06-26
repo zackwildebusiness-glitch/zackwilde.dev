@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+# FinTrack live demo is a client-routed SPA served under /demos/fintrack/.
+# Send unknown sub-paths to its index.html so React Router can handle them.
+[[redirects]]
+  from = "/demos/fintrack/*"
+  to = "/demos/fintrack/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]

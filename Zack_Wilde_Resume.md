@@ -22,16 +22,16 @@ Full-stack developer working across React, React Native, Expo, Node/Express, Sho
 
 Expo goal-planning app that turns one goal into a weekly plan with daily actions, reminders, reflections, and streak tracking.
 
-- Built the mobile app with Expo Router, React Native, Zustand, MMKV persistence, local notifications, haptics, and EAS build profiles.
-- Kept the AI provider key and prompt handling on the backend with JSON extraction, Zod validation, quota checks, and fallback responses.
+- Built the Expo app (Router, React Native, Zustand, MMKV, notifications, haptics, EAS) and packaged it for Android closed testing with Play Store metadata.
+- Kept the Claude API key server-side behind an Express/TypeScript API with Zod validation, quota checks, and fallbacks; GitHub Actions CI runs typecheck and tests on both services.
 
 ### FinTrack
 *Finance dashboard*
 
 Finance dashboard for service businesses to review transactions, budgets, recurring costs, and reports.
 
-- Built dashboard views for revenue, expenses, profit, category spend, budget progress, recurring overhead, and cash flow trends.
-- Added CSV import with duplicate checks, column mapping, vendor memory, review workflows, accountant export, and Supabase Auth plus RLS.
+- Built dashboard, cash-flow, review, tax-prep, and report views over a 7-table Supabase schema with 9 row-level-security policies isolating each business's data.
+- Added CSV import with duplicate detection, column mapping, vendor-category memory, and a review workflow; ships a one-click public demo backed by six months of seeded data.
 
 ### Kakebo Shop
 *Shopify storefront*

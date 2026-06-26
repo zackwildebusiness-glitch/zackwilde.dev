@@ -201,8 +201,8 @@
               </div>
             </details>
             <ul>
-              <li>Kept the AI provider key and prompt handling on the backend, with JSON cleanup, Zod validation, quotas, and fallbacks.</li>
-              <li>Built the mobile side with Expo Router, Zustand, MMKV, local notifications, haptics, Render deployment, EAS profiles, and Vitest tests.</li>
+              <li>Kept the Claude API key server-side behind an Express/TypeScript API with Zod validation, multi-strategy JSON extraction, Postgres-backed quotas, and fallbacks, so malformed model output never reaches the app.</li>
+              <li>Built the Expo app (Router, Zustand, MMKV, notifications, haptics) and packaged it for Android closed testing with Play Store metadata; GitHub Actions CI runs typecheck and Vitest on both services before handoff.</li>
             </ul>
             <dl class="project-facts" aria-label="Daily 60 project facts">
               <div><dt>Focus</dt><dd>AI plan generation</dd></div>
@@ -225,17 +225,46 @@
             <p class="project-type">Finance dashboard</p>
             <h3>FinTrack</h3>
             <p>FinTrack is a finance dashboard for small service businesses. It helps organize transactions, budgets, recurring costs, reports, and accountant exports.</p>
+            <details class="case-study">
+              <summary>FinTrack case study</summary>
+              <div class="case-study-body">
+                <div>
+                  <strong>Problem</strong>
+                  <p>Small service businesses run their finances out of spreadsheets and lose track of which transactions they have actually reviewed, what is recurring, and whether they are over budget.</p>
+                </div>
+                <div>
+                  <strong>Constraints</strong>
+                  <p>It had to be useful with zero setup, yet sit on real per-business accounts without a rewrite. Every business's data must stay isolated from every other's.</p>
+                </div>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>React and Vite on the front, Recharts for charts, PapaParse for CSV. Supabase Auth backs a 7-table Postgres schema with 9 row-level-security policies so each account only sees its own rows.</p>
+                </div>
+                <div>
+                  <strong>Tradeoff</strong>
+                  <p>I made the app demoable before auth existed by persisting review state and budgets client-side first, then layering Supabase on top. That keeps a dual data path, but the product was usable and shippable at every step.</p>
+                </div>
+                <div>
+                  <strong>Testing</strong>
+                  <p>Verified the import, review, and budget flows in the browser against six months of seeded data, including duplicate detection, vendor-category memory, and over-budget highlighting.</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>A reviewable import-to-report dashboard with per-business RLS isolation and a one-click public demo anyone can open without signing up.</p>
+                </div>
+              </div>
+            </details>
             <ul>
-              <li>Built CSV import with duplicate checks, column mapping, vendor category memory, import summaries, and flagged transaction review.</li>
-              <li>Added Supabase Auth wiring, user-owned tables, indexes, triggers, RLS policies, reports, budgets, and review records.</li>
+              <li>Built dashboard, cash-flow, weekly-review, tax-prep, and report views over a 7-table Supabase schema with 9 row-level-security policies isolating each business's data.</li>
+              <li>Added CSV import with duplicate detection, column mapping, and vendor-category memory, plus a flagged-transaction review flow; ships a one-click public demo backed by six months of seeded data.</li>
             </ul>
             <dl class="project-facts" aria-label="FinTrack project facts">
               <div><dt>Focus</dt><dd>Import and review flow</dd></div>
-              <div><dt>Delivery</dt><dd>Dashboard and data model</dd></div>
-              <div><dt>Proof</dt><dd>RLS, reports, indexes</dd></div>
+              <div><dt>Delivery</dt><dd>Live demo and data model</dd></div>
+              <div><dt>Proof</dt><dd>7 tables, 9 RLS policies</dd></div>
             </dl>
             <div class="project-links" aria-label="FinTrack project access">
-              <span class="project-link is-muted">Demo available on request</span>
+              <a class="project-link" href="demos/fintrack/" target="_blank" rel="noopener">Live demo</a>
               <span class="project-link is-muted">Private repo</span>
             </div>
             <div class="tags"><span>React</span><span>Recharts</span><span>Supabase</span><span>CSV workflows</span></div>
@@ -250,6 +279,35 @@
             <p class="project-type">Shopify ecommerce storefront</p>
             <h3>Kakebo Shop</h3>
             <p>Kakebo Shop is a live Shopify storefront for anime and collectible products. I worked on collection pages, product presentation, navigation, and SEO structure.</p>
+            <details class="case-study">
+              <summary>Kakebo Shop case study</summary>
+              <div class="case-study-body">
+                <div>
+                  <strong>Problem</strong>
+                  <p>A new store with a deep catalog but weak discovery. Collections, navigation, and on-page SEO needed real structure before shoppers and search engines could find products.</p>
+                </div>
+                <div>
+                  <strong>Constraints</strong>
+                  <p>All work happened inside a live theme. Changes had to be safe to ship to a running storefront without breaking checkout or existing pages.</p>
+                </div>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>Customized Liquid sections, snippets, and collection templates, and drove bulk product, collection, and SEO-field updates through Shopify Admin GraphQL scripts instead of editing items by hand.</p>
+                </div>
+                <div>
+                  <strong>Tradeoff</strong>
+                  <p>Scripting catalog edits via the Admin API cost more setup time than manual edits, but made changes repeatable and safe to re-run across the whole catalog.</p>
+                </div>
+                <div>
+                  <strong>Testing</strong>
+                  <p>QA across collection, product, and navigation states, plus FAQ schema and visible SEO content to support discovery.</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>A live, navigable storefront with cleaner collection structure, internal linking, and structured data. The store link is below.</p>
+                </div>
+              </div>
+            </details>
             <ul>
               <li>Updated Liquid sections, snippets, collection templates, navigation, visible SEO content, FAQ schema, related links, and storefront QA.</li>
               <li>Used Shopify Admin GraphQL scripts for product cleanup, collection updates, SEO fields, and catalog maintenance.</li>
@@ -275,6 +333,35 @@
             <p class="project-type">Lead-generation website</p>
             <h3>Wilde Digital</h3>
             <p>Wilde Digital is a static service website with project pages, service pages, an ROI calculator, lead forms, mini CRM behavior, and Netlify deployment setup.</p>
+            <details class="case-study">
+              <summary>Wilde Digital case study</summary>
+              <div class="case-study-body">
+                <div>
+                  <strong>Problem</strong>
+                  <p>A web studio's own site has to convert visitors into qualified leads, not just look good. It needed capture, qualification, and a way to follow up.</p>
+                </div>
+                <div>
+                  <strong>Constraints</strong>
+                  <p>Static hosting with no server, but still needing lead capture, scoring, and tracking that the owner could run without a backend or database bill.</p>
+                </div>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>Hand-built HTML, CSS, and JavaScript on Netlify with structured data, sitemap, and robots. An ROI calculator and lead forms feed a client-side mini-CRM with status tracking, CSV export, and local persistence, plus a fallback email flow.</p>
+                </div>
+                <div>
+                  <strong>Tradeoff</strong>
+                  <p>A static site with a client-side CRM is cheap and deploys instantly, at the cost of server-side persistence. That was the right call for a solo studio's lead volume.</p>
+                </div>
+                <div>
+                  <strong>Testing</strong>
+                  <p>Node test scripts cover the ROI model, lead intake, and qualification logic so the calculator and scoring stay correct as copy and pricing change.</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>A live lead-generation site with a working ROI calculator and a capture-to-export pipeline. The site link is below.</p>
+                </div>
+              </div>
+            </details>
             <ul>
               <li>Built the public site with HTML, CSS, JavaScript, structured data, sitemap and robots files, and Netlify configuration.</li>
               <li>Added ROI calculator logic, lead qualification, CRM status tracking, CSV export, local persistence, and fallback email flows.</li>
@@ -300,6 +387,35 @@
             <p class="project-type">Local service website</p>
             <h3>Luxury Solutions</h3>
             <p>Luxury Solutions is a static website for an exterior cleaning business. I focused on service pages, local pages, trust signals, and making quote requests easy on mobile.</p>
+            <details class="case-study">
+              <summary>Luxury Solutions case study</summary>
+              <div class="case-study-body">
+                <div>
+                  <strong>Problem</strong>
+                  <p>A local exterior-cleaning business needed to show up for "near me" searches and make requesting a quote effortless on a phone.</p>
+                </div>
+                <div>
+                  <strong>Constraints</strong>
+                  <p>Local SEO had to cover many service and area combinations, stay fast and mobile-first, and remain simple enough for the owner to hand off and maintain.</p>
+                </div>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>A static responsive site with per-service and per-service-area pages, trust content like testimonials and recent work, and a build pipeline for prerender, image optimization, SEO checks, sitemap and robots, and a deploy zip.</p>
+                </div>
+                <div>
+                  <strong>Tradeoff</strong>
+                  <p>Generating many service-area pages widens local search reach but adds pages to maintain. I leaned toward coverage because local intent searches are where the leads are.</p>
+                </div>
+                <div>
+                  <strong>Testing</strong>
+                  <p>Ran the SEO checks and build pipeline before each deploy to catch broken metadata, missing pages, and unoptimized images.</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>A live local-service site built around quote requests and local search. The site link is below.</p>
+                </div>
+              </div>
+            </details>
             <ul>
               <li>Built service and location pages, quote paths, testimonials, recent work sections, sitemap/robots files, and deployment scripts.</li>
               <li>Added build, prerender, image optimization, SEO checks, and deploy-zip workflows for handoff.</li>
