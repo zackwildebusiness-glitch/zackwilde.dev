@@ -23,12 +23,12 @@ npx serve .
 
 ## Deployment
 
-Deploy the `zackwilde.dev` folder as a static site. For Netlify, set:
+Deploy the project folder as a static site. For Netlify, set:
 
 - Publish directory: `.`
 - Build command: empty
 
-Then connect the custom domain `zackwilde.dev` in the hosting provider.
+The site is served at `https://zackwilde-dev.netlify.app/`.
 
 ## Resume PDF
 

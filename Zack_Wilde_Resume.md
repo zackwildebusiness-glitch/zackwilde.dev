@@ -1,12 +1,12 @@
 # Zack Wilde
 
-**Web Developer**
+**Full-Stack Developer**
 
 zackwilde-dev.netlify.app | zackwildebusiness@gmail.com | github.com/zackwildebusiness-glitch | linkedin.com/in/zachary-wilde-5b82222b8
 
 ## Summary
 
-Web developer working across React, React Native, Expo, Node/Express, Shopify, Supabase, and static business websites. I build practical apps and websites with clear flows, working data handling, deployment setup, and enough testing or review to hand off without extra cleanup.
+Full-stack developer working across React, React Native, Expo, Node/Express, Shopify, Supabase, and static business websites. I build practical apps and websites with clear flows, working data handling, deployment setup, and enough testing or review to hand off without extra cleanup.
 
 ## Skills
 
@@ -18,6 +18,7 @@ Web developer working across React, React Native, Expo, Node/Express, Shopify, S
 ## Selected Work
 
 ### Daily 60
+*Mobile app · AI backend*
 
 Expo goal-planning app that turns one goal into a weekly plan with daily actions, reminders, reflections, and streak tracking.
 
@@ -25,6 +26,7 @@ Expo goal-planning app that turns one goal into a weekly plan with daily actions
 - Kept the AI provider key and prompt handling on the backend with JSON extraction, Zod validation, quota checks, and fallback responses.
 
 ### FinTrack
+*Finance dashboard*
 
 Finance dashboard for service businesses to review transactions, budgets, recurring costs, and reports.
 
@@ -32,6 +34,7 @@ Finance dashboard for service businesses to review transactions, budgets, recurr
 - Added CSV import with duplicate checks, column mapping, vendor memory, review workflows, accountant export, and Supabase Auth plus RLS.
 
 ### Kakebo Shop
+*Shopify storefront*
 
 Live Shopify storefront for anime figures, Tokusatsu items, wall art, apparel, blind boxes, plush, and collectibles.
 
@@ -39,6 +42,7 @@ Live Shopify storefront for anime figures, Tokusatsu items, wall art, apparel, b
 - Improved catalog discovery with collection structure, FAQ schema, visible SEO content, internal links, and Shopify Admin GraphQL scripts.
 
 ### Wilde Digital
+*Lead-gen website*
 
 Static service website with project pages, service pages, an ROI calculator, lead forms, mini CRM behavior, and Netlify deployment setup.
 
@@ -46,6 +50,7 @@ Static service website with project pages, service pages, an ROI calculator, lea
 - Added ROI calculator logic, lead qualification, CRM status tracking, CSV export, local persistence, and fallback email flows.
 
 ### Luxury Solutions
+*Local service site*
 
 Local service website for a Hamilton-area exterior cleaning business focused on quote requests, trust signals, and local SEO.
 
