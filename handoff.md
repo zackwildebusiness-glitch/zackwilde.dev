@@ -50,12 +50,15 @@ Triggered by Zack asking "why is the update not pushed to Netlify." Root cause +
 
 Ordered by priority.
 
-- [ ] **REQUIRED — Reconcile the stray FinTrack changes in the working tree.** `demos/fintrack/index.html` is modified and its JS bundle was swapped (`index-BokvPve0.js` deleted, `index-CI_6Jr2t.js` added) but these are **uncommitted** — they predate this session and I left them untouched. Because CLI deploys publish the working directory, **they are already live but not in git.** Decide: commit them (if a legit FinTrack rebuild) or `git checkout`/revert (if unintended), so git matches production. Until then, git and the live site disagree.
-- [ ] **REQUIRED — Regenerate `assets/og-image.png`.** Still stale in TWO ways: shows **"zackwilde.dev"** (wrong domain) and **"Web Developer"** (now "Full-Stack Developer"). Re-render with `zackwilde-dev.netlify.app` (or no URL) and the **Full-Stack Developer** title. On-brand: paper `#f5f7f4`, ink `#111816`, teal `#0f766e`, ZW mark, tech chips, 1200×630. (Untouched by all passes.)
-- [ ] **OPTIONAL — Push the Daily Sixty app-repo commits.** `e03d581` (web platform support) and `1d833fe` (compact category) are committed **locally only** in `D:\Apps\Daily Sixty`. Push to that repo's remote if you want the web-export capability tracked there. To rebuild the demo: from `Daily Sixty/mobile`, temporarily set `expo.experiments.baseUrl = "/demos/daily60"` in `app.json`, run `npx expo export -p web` (with empty `EXPO_PUBLIC_API_URL`/`EXPO_PUBLIC_API_SECRET`), revert the baseUrl, then copy `dist/*` into `zackwilde.dev/demos/daily60/` and `git add -f` (the assets sit under a `node_modules/` path that `.gitignore` blocks).
-- [ ] **OPTIONAL — Commit the FinTrack `basename` change.** A one-line edit to `D:\Apps\Finance Dashboard\src\main.jsx` (`basename={import.meta.env.BASE_URL}`) is uncommitted **in that separate repo** — only needed if you rebuild that demo.
-- [ ] **VERIFY — Raster spot-check the PDF.** `Zack_Wilde_Resume.pdf` was confirmed one page via page-count parsing, but not raster-previewed (no `pdftoppm` here). Open it and confirm fonts, rust type labels, and the FinTrack/Daily 60 bullets render with no overflow to a second page.
 - [ ] **CONSIDER — Daily 60 demo uses canned AI responses.** The web demo's plan/action/reflection text is mocked (`lib/api.web.ts`), lightly goal-aware but not real model output — the right call, since the real backend needs a secret that can't ship publicly. Fine for a portfolio demo (FinTrack runs on seeded data too). Only revisit if Zack wants genuinely live AI in the demo, which would require a public, rate-limited proxy (added cost/abuse risk — not recommended).
+
+### Codex follow-up
+
+- [x] **FinTrack demo reconciled in portfolio working tree** — the no-login demo rebuild is now the intended `demos/fintrack/` output (`index-CI_6Jr2t.js` referenced from `index.html`; old `index-BokvPve0.js` removed).
+- [x] **OG image regenerated** — `assets/og-image.png` is 1200×630 and uses `zackwilde-dev.netlify.app`, "Full-Stack Developer", the ZW mark, requested colors, and tech chips.
+- [x] **Resume PDF raster spot-check** — rendered `Zack_Wilde_Resume.pdf` page 1 with PyMuPDF at 2× scale; it is one page, fonts render, rust labels render, and the FinTrack/Daily 60 bullets fit.
+- [x] **FinTrack source basename checked** — `D:\Apps\Finance Dashboard\src\main.jsx` contains `basename={import.meta.env.BASE_URL}`. That repo remains intentionally uncommitted because it has a much larger dirty source tree.
+- [ ] **Optional external repo push still open** — `D:\Apps\Daily Sixty` is ahead of `origin/master` by 3 commits and also has unrelated dirty files. Push only after deciding those local app-repo commits should be published.
 
 ### Done (do not redo)
 
