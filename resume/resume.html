@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zack Wilde Resume</title>
+<style>
+@page{size:Letter;margin:.46in .54in}
+*{box-sizing:border-box}
+html,body{background:#fff}
+body{
+  max-width:7.45in;
+  margin:0 auto;
+  color:#16211f;
+  font-family:Arial,"Segoe UI",Helvetica,sans-serif;
+  font-size:10.5px;
+  line-height:1.33;
+}
+a{color:inherit;text-decoration:none}
+.header{
+  display:grid;
+  grid-template-columns:1fr 2.2fr;
+  gap:18px;
+  align-items:end;
+  margin:0 0 10px;
+  padding:0 0 8px;
+  border-bottom:2px solid #0b4f4a;
+}
+h1{
+  margin:0 0 3px;
+  color:#0f1816;
+  font-size:25px;
+  line-height:.98;
+  letter-spacing:0;
+}
+.role{
+  margin:0;
+  color:#0b4f4a;
+  font-size:11.5px;
+  font-weight:700;
+}
+.contact{
+  display:grid;
+  grid-template-columns:max-content max-content;
+  justify-content:end;
+  gap:2px 12px;
+  margin:0;
+  color:#34413e;
+  font-size:9.7px;
+  line-height:1.35;
+  text-align:right;
+}
+.contact span{white-space:nowrap}
+section{margin:0 0 9px}
+h2{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:10px 0 5px;
+  color:#0b4f4a;
+  font-size:11.1px;
+  line-height:1.1;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+h2::after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:#bac7c2;
+}
+p{margin:0 0 5px}
+.summary{
+  margin-bottom:8px;
+  color:#24312e;
+  font-size:10.8px;
+}
+.skills{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px 14px;
+  margin-top:3px;
+}
+.skill{
+  margin:0;
+  padding-left:8px;
+  border-left:2px solid #b9d2cb;
+}
+.skill strong{
+  display:block;
+  margin-bottom:1px;
+  color:#111816;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.035em;
+}
+.project{
+  break-inside:avoid;
+  page-break-inside:avoid;
+  margin:0 0 7px;
+  padding-top:1px;
+}
+h3{
+  margin:0 0 2px;
+  color:#111816;
+  font-size:11.2px;
+  line-height:1.15;
+}
+.project>p{
+  margin-bottom:3px;
+  color:#2b3835;
+}
+ul{
+  margin:2px 0 0 15px;
+  padding:0;
+}
+li{
+  margin:0 0 2px;
+  padding-left:1px;
+}
+.additional{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3px 14px;
+}
+.additional p{
+  break-inside:avoid;
+  page-break-inside:avoid;
+  margin:0;
+}
+.additional strong{color:#111816}
+@media(max-width:720px){
+  body{padding:24px 18px;font-size:11px}
+  .header{grid-template-columns:1fr;gap:7px}
+  .contact{display:flex;flex-wrap:wrap;justify-content:flex-start;text-align:left}
+  .skills,.additional{grid-template-columns:1fr}
+}
+@media print{
+  body{padding:0}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div>
+    <h1>Zack Wilde</h1>
+    <p class="role">Web Developer</p>
+  </div>
+  <p class="contact">
+    <span>zackwilde-dev.netlify.app</span>
+    <span>zackwildebusiness@gmail.com</span>
+    <span>github.com/zackwildebusiness-glitch</span>
+    <span>linkedin.com/in/zachary-wilde-5b82222b8</span>
+  </p>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">Web developer working across React, React Native, Expo, Node/Express, Shopify, Supabase, and static business websites. I build practical apps and websites with clear flows, working data handling, deployment setup, and enough testing or review to hand off without extra cleanup.</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <p class="skill"><strong>Frontend</strong>React, React Native, Expo, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Vite, Next.js, responsive UI</p>
+    <p class="skill"><strong>Backend and data</strong>Node.js, Express, REST APIs, Supabase, PostgreSQL, RLS policies, Zod validation, serverless functions</p>
+    <p class="skill"><strong>Websites and commerce</strong>Shopify, Liquid, Shopify Admin GraphQL, product catalogs, collection pages, structured data, local SEO</p>
+    <p class="skill"><strong>Delivery</strong>Git, GitHub, GitHub Actions CI, Netlify, Render, EAS builds, Vitest, Node test runner, sitemap and robots setup</p>
+  </div>
+</section>
+
+<section>
+  <h2>Selected Work</h2>
+  <article class="project">
+    <h3>Daily 60</h3>
+    <p>Expo goal-planning app that turns one goal into a weekly plan with daily actions, reminders, reflections, and streak tracking.</p>
+    <ul>
+      <li>Built the mobile app with Expo Router, React Native, Zustand, MMKV persistence, local notifications, haptics, and EAS build profiles.</li>
+      <li>Kept the AI provider key and prompt handling on the backend with JSON extraction, Zod validation, quota checks, and fallback responses.</li>
+    </ul>
+  </article>
+  <article class="project">
+    <h3>FinTrack</h3>
+    <p>Finance dashboard for service businesses to review transactions, budgets, recurring costs, and reports.</p>
+    <ul>
+      <li>Built dashboard views for revenue, expenses, profit, category spend, budget progress, recurring overhead, and cash flow trends.</li>
+      <li>Added CSV import with duplicate checks, column mapping, vendor memory, review workflows, accountant export, and Supabase Auth plus RLS.</li>
+    </ul>
+  </article>
+  <article class="project">
+    <h3>Kakebo Shop</h3>
+    <p>Live Shopify storefront for anime figures, Tokusatsu items, wall art, apparel, blind boxes, plush, and collectibles.</p>
+    <ul>
+      <li>Updated Liquid sections, snippets, collection templates, navigation, product presentation, and storefront QA.</li>
+      <li>Improved catalog discovery with collection structure, FAQ schema, visible SEO content, internal links, and Shopify Admin GraphQL scripts.</li>
+    </ul>
+  </article>
+  <article class="project">
+    <h3>Wilde Digital</h3>
+    <p>Static service website with project pages, service pages, an ROI calculator, lead forms, mini CRM behavior, and Netlify deployment setup.</p>
+    <ul>
+      <li>Built the public site with HTML, CSS, JavaScript, structured data, sitemap and robots files, and Netlify configuration.</li>
+      <li>Added ROI calculator logic, lead qualification, CRM status tracking, CSV export, local persistence, and fallback email flows.</li>
+    </ul>
+  </article>
+  <article class="project">
+    <h3>Luxury Solutions</h3>
+    <p>Local service website for a Hamilton-area exterior cleaning business focused on quote requests, trust signals, and local SEO.</p>
+    <ul>
+      <li>Built responsive pages for window cleaning, pressure washing, gutter cleaning, soft washing, deck/fence cleaning, commercial services, and service-area pages.</li>
+      <li>Added calls to action, contact paths, testimonials, recent work sections, sitemap and robots files, and deployment scripts.</li>
+    </ul>
+  </article>
+</section>
+
+<section>
+  <h2>Additional Projects</h2>
+  <div class="additional">
+    <p><strong>Chatter:</strong> React/Vite and Capacitor app with an Express/OpenAI backend for coaching, local speech capture, haptics, and transcript handling.</p>
+    <p><strong>Chatter Mobile:</strong> Expo React Native prototype for call coaching, tablet/mobile/web layouts, speech output, and negotiation guidance.</p>
+    <p><strong>Habit Tracker:</strong> Next.js and Supabase habit tracker with RLS, anonymous/email identity, owner-key isolation, drag-and-drop ordering, charts, and Stripe integration.</p>
+    <p><strong>Daily 60 Base44 PWA:</strong> React/Vite habit product with Base44 auth/database/functions, Claude integration, Stripe premium purchase flow, notifications, Resend email, and achievements.</p>
+    <p><strong>Maze Generator:</strong> Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.</p>
+    <p><strong>Volume Booster:</strong> Native Android project using Kotlin, Gradle, AndroidX, AppCompat, Material components, and packaged app configuration.</p>
+  </div>
+</section>
+</body>
+</html>

@@ -187,6 +187,23 @@ h3 {
   gap: 12px;
 }
 
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-highlights span {
+  padding: 8px 10px;
+  color: var(--accent-dark);
+  background: rgba(15, 118, 110, 0.08);
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .button {
   display: inline-flex;
   min-height: 46px;
@@ -195,8 +212,11 @@ h3 {
   padding: 12px 18px;
   border: 1px solid var(--ink);
   border-radius: 8px;
+  color: inherit;
+  font: inherit;
   font-weight: 800;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button.primary {
@@ -336,6 +356,46 @@ h3 {
   margin-bottom: 34px;
 }
 
+.services-section {
+  padding-top: 72px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.service-grid article {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.service-grid span {
+  width: fit-content;
+  margin-bottom: 42px;
+  padding: 6px 8px;
+  color: var(--accent-dark);
+  background: rgba(15, 118, 110, 0.09);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.service-grid h3 {
+  font-size: 24px;
+}
+
+.service-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .proof-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -454,6 +514,108 @@ h3 {
   margin-bottom: 8px;
 }
 
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 18px;
+}
+
+.project-facts div {
+  padding: 10px;
+  background: var(--soft-panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.project-facts dt {
+  margin-bottom: 4px;
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.case-study {
+  margin: 16px 0 18px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-study summary {
+  min-height: 44px;
+  padding: 12px 0;
+  color: var(--accent-dark);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.case-study summary:hover {
+  color: var(--ink);
+}
+
+.case-study-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  padding: 0 0 16px;
+}
+
+.case-study-body strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-study-body p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.project-link {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  padding: 8px 11px;
+  color: #fff;
+  background: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.project-link[href]:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.project-link.is-muted {
+  color: var(--muted);
+  background: transparent;
+  border-color: var(--line);
+}
+
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -518,6 +680,12 @@ h3 {
 
 .contact-card .button + .button {
   margin-top: 10px;
+}
+
+.contact-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 .contact-links {
@@ -617,6 +785,7 @@ h3 {
   }
 
   .proof-band,
+  .service-grid,
   .capability-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -645,8 +814,16 @@ h3 {
   }
 
   h1 {
+    max-width: 340px;
     font-size: 36px;
     line-height: 1.05;
+  }
+
+  .hero-copy,
+  .hero-lede,
+  .hero-actions,
+  .hero-highlights {
+    max-width: 340px;
   }
 
   .hero {
@@ -665,12 +842,25 @@ h3 {
 
   .hero-workbench,
   .proof-band,
+  .service-grid,
   .capability-grid {
     grid-template-columns: 1fr;
   }
 
+  .hero-highlights {
+    display: grid;
+  }
+
   .project {
     padding: 14px;
+  }
+
+  .project-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-body {
+    grid-template-columns: 1fr;
   }
 
   .app-shot img {

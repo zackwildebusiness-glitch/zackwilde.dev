@@ -6,11 +6,21 @@
   <title>Zack Wilde | Web Developer</title>
   <meta name="description" content="Zack Wilde's web developer portfolio with React apps, Expo mobile work, Shopify storefronts, Supabase dashboards, and local business websites.">
   <meta name="theme-color" content="#f5f7f4">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" sizes="any" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <meta property="og:title" content="Zack Wilde | Web Developer">
   <meta property="og:description" content="React, Expo, Shopify, Supabase, and static website projects by Zack Wilde.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zackwilde.dev/">
-  <meta property="og:image" content="https://zackwilde.dev/assets/fintrack.png">
+  <meta property="og:image" content="https://zackwilde.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zack Wilde, Web Developer — React apps, Expo mobile, Shopify, and Supabase dashboards.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zack Wilde | Web Developer">
+  <meta name="twitter:description" content="React, Expo, Shopify, Supabase, and static website projects by Zack Wilde.">
+  <meta name="twitter:image" content="https://zackwilde.dev/assets/og-image.png">
   <link rel="canonical" href="https://zackwilde.dev/">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
@@ -46,6 +56,7 @@
       <span class="brand-text">Zack Wilde</span>
     </a>
     <nav class="nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#skills">Skills</a>
       <a href="#process">Process</a>
@@ -63,6 +74,11 @@
         <div class="hero-actions" aria-label="Primary actions">
           <a class="button primary" href="#work">View Work</a>
           <a class="button secondary" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-highlights" aria-label="Work highlights">
+          <span>React and Expo apps</span>
+          <span>Shopify storefronts</span>
+          <span>Supabase dashboards</span>
         </div>
       </div>
 
@@ -111,6 +127,35 @@
       </div>
     </section>
 
+    <section class="section services-section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Best fit</p>
+        <h2>Useful places to bring me in.</h2>
+      </div>
+      <div class="service-grid">
+        <article>
+          <span>01</span>
+          <h3>App prototypes</h3>
+          <p>Turn a focused product idea into a working React, Expo, or API-backed MVP with real screens, state, validation, and deploy notes.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Dashboards</h3>
+          <p>Build small-business workflows around imports, reports, review queues, Supabase data ownership, and practical admin screens.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Shopify cleanup</h3>
+          <p>Improve collection structure, Liquid sections, product content, internal links, schema, and repeatable catalog maintenance.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Local websites</h3>
+          <p>Ship service pages, quote paths, local SEO basics, trust content, responsive layouts, and simple deployment handoffs.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="work">
       <div class="section-heading">
         <p class="eyebrow">Selected work</p>
@@ -126,10 +171,48 @@
             <p class="project-type">Mobile app with AI backend</p>
             <h3>Daily 60</h3>
             <p>Daily 60 is an Expo app that takes one goal and turns it into a weekly plan with daily actions, reminders, reflections, and streak progress.</p>
+            <details class="case-study">
+              <summary>Daily 60 case study</summary>
+              <div class="case-study-body">
+                <div>
+                  <strong>Problem</strong>
+                  <p>Planning tools often turn one goal into too much setup. Daily 60 keeps the first version narrow: one goal, one weekly plan, one action for today.</p>
+                </div>
+                <div>
+                  <strong>Constraints</strong>
+                  <p>The AI key had to stay off-device, responses needed to survive malformed model output, and the app still needed a useful fallback path.</p>
+                </div>
+                <div>
+                  <strong>Architecture</strong>
+                  <p>Expo Router handles the app flow, Zustand and MMKV keep local state fast, and an Express API owns prompt handling, quotas, JSON cleanup, and Zod validation.</p>
+                </div>
+                <div>
+                  <strong>Tradeoff</strong>
+                  <p>I kept plan generation server-side instead of calling AI from the app. That adds an API hop, but protects secrets and makes validation, rate limits, and provider changes easier.</p>
+                </div>
+                <div>
+                  <strong>Testing</strong>
+                  <p>Vitest covers the mobile store and backend behavior, with GitHub Actions CI running typecheck and test jobs before handoff.</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>The result is a reviewable mobile MVP with onboarding, AI plan generation, daily actions, reminders, haptics, reflections, streaks, and deploy notes.</p>
+                </div>
+              </div>
+            </details>
             <ul>
               <li>Kept the AI provider key and prompt handling on the backend, with JSON cleanup, Zod validation, quotas, and fallbacks.</li>
               <li>Built the mobile side with Expo Router, Zustand, MMKV, local notifications, haptics, Render deployment, EAS profiles, and Vitest tests.</li>
             </ul>
+            <dl class="project-facts" aria-label="Daily 60 project facts">
+              <div><dt>Focus</dt><dd>AI plan generation</dd></div>
+              <div><dt>Delivery</dt><dd>Mobile MVP and backend</dd></div>
+              <div><dt>Proof</dt><dd>Validation, quotas, tests</dd></div>
+            </dl>
+            <div class="project-links" aria-label="Daily 60 project access">
+              <span class="project-link is-muted">Mobile build available on request</span>
+              <span class="project-link is-muted">Private repo</span>
+            </div>
             <div class="tags"><span>React Native</span><span>Express</span><span>TypeScript</span><span>AI integration</span></div>
           </div>
         </article>
@@ -146,6 +229,15 @@
               <li>Built CSV import with duplicate checks, column mapping, vendor category memory, import summaries, and flagged transaction review.</li>
               <li>Added Supabase Auth wiring, user-owned tables, indexes, triggers, RLS policies, reports, budgets, and review records.</li>
             </ul>
+            <dl class="project-facts" aria-label="FinTrack project facts">
+              <div><dt>Focus</dt><dd>Import and review flow</dd></div>
+              <div><dt>Delivery</dt><dd>Dashboard and data model</dd></div>
+              <div><dt>Proof</dt><dd>RLS, reports, indexes</dd></div>
+            </dl>
+            <div class="project-links" aria-label="FinTrack project access">
+              <span class="project-link is-muted">Demo available on request</span>
+              <span class="project-link is-muted">Private repo</span>
+            </div>
             <div class="tags"><span>React</span><span>Recharts</span><span>Supabase</span><span>CSV workflows</span></div>
           </div>
         </article>
@@ -162,6 +254,15 @@
               <li>Updated Liquid sections, snippets, collection templates, navigation, visible SEO content, FAQ schema, related links, and storefront QA.</li>
               <li>Used Shopify Admin GraphQL scripts for product cleanup, collection updates, SEO fields, and catalog maintenance.</li>
             </ul>
+            <dl class="project-facts" aria-label="Kakebo Shop project facts">
+              <div><dt>Focus</dt><dd>Storefront content</dd></div>
+              <div><dt>Delivery</dt><dd>Liquid and catalog updates</dd></div>
+              <div><dt>Proof</dt><dd>Schema and SEO structure</dd></div>
+            </dl>
+            <div class="project-links" aria-label="Kakebo Shop project links">
+              <a class="project-link" href="https://kakeboshop.com/" target="_blank" rel="noopener">Live store</a>
+              <span class="project-link is-muted">Theme repo available on request</span>
+            </div>
             <div class="tags"><span>Shopify</span><span>Liquid</span><span>Admin GraphQL</span><span>Ecommerce SEO</span></div>
           </div>
         </article>
@@ -178,6 +279,15 @@
               <li>Built service and location pages, quote paths, testimonials, recent work sections, sitemap/robots files, and deployment scripts.</li>
               <li>Added build, prerender, image optimization, SEO checks, and deploy-zip workflows for handoff.</li>
             </ul>
+            <dl class="project-facts" aria-label="Luxury Solutions project facts">
+              <div><dt>Focus</dt><dd>Local lead generation</dd></div>
+              <div><dt>Delivery</dt><dd>Static site and deploy files</dd></div>
+              <div><dt>Proof</dt><dd>SEO checks and sitemap</dd></div>
+            </dl>
+            <div class="project-links" aria-label="Luxury Solutions project links">
+              <a class="project-link" href="https://theluxurysolution.ca/" target="_blank" rel="noopener">Live site</a>
+              <span class="project-link is-muted">Source available on request</span>
+            </div>
             <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Local SEO</span></div>
           </div>
         </article>
@@ -204,7 +314,7 @@
         </article>
         <article>
           <h3>Delivery</h3>
-          <p>GitHub, Netlify, Render, EAS builds, Playwright QA, Vitest, Node test runner, and deployment handoffs.</p>
+          <p>GitHub, GitHub Actions CI, Netlify, Render, EAS builds, Vitest, Node test runner, and deployment handoffs.</p>
         </article>
       </div>
     </section>
@@ -230,7 +340,9 @@
       </div>
       <div class="contact-card">
         <a class="button primary full" href="mailto:zackwildebusiness@gmail.com">Email Zack</a>
+        <button class="button secondary full" type="button" data-copy-email data-email="zackwildebusiness@gmail.com">Copy Email</button>
         <a class="button secondary full" href="Zack_Wilde_Resume.pdf">Download Resume</a>
+        <p class="contact-note">Available for junior developer roles, implementation support, and focused portfolio-style project work.</p>
         <div class="contact-links">
           <a href="https://github.com/zackwildebusiness-glitch">GitHub</a>
           <a href="https://www.linkedin.com/in/zachary-wilde-5b82222b8/">LinkedIn</a>
@@ -244,7 +356,7 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <div class="lightbox" data-lightbox hidden>
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Enlarged project screenshot" hidden>
     <button class="lightbox-close" type="button" data-lightbox-close aria-label="Close enlarged screenshot">Close</button>
     <img src="" alt="" data-lightbox-image>
   </div>

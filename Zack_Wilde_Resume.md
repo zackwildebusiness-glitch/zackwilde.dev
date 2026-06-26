@@ -1,11 +1,8 @@
 # Zack Wilde
 
-Web Developer
+**Web Developer**
 
-Portfolio: zackwilde.dev  
-Email: zackwildebusiness@gmail.com  
-GitHub: github.com/zackwildebusiness-glitch  
-LinkedIn: linkedin.com/in/zachary-wilde-5b82222b8
+zackwilde-dev.netlify.app | zackwildebusiness@gmail.com | github.com/zackwildebusiness-glitch | linkedin.com/in/zachary-wilde-5b82222b8
 
 ## Summary
 
@@ -13,10 +10,10 @@ Web developer working across React, React Native, Expo, Node/Express, Shopify, S
 
 ## Skills
 
-Frontend: React, React Native, Expo, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Vite, Next.js, responsive UI  
-Backend and data: Node.js, Express, REST APIs, Supabase, PostgreSQL, RLS policies, Zod validation, serverless functions  
-Websites and commerce: Shopify, Liquid, Shopify Admin GraphQL, product catalogs, collection pages, structured data, local SEO  
-Delivery: Git, GitHub, Netlify, Render, EAS builds, Playwright, Vitest, Node test runner, sitemap and robots setup
+**Frontend:** React, React Native, Expo, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Vite, Next.js, responsive UI<br>
+**Backend and data:** Node.js, Express, REST APIs, Supabase, PostgreSQL, RLS policies, Zod validation, serverless functions<br>
+**Websites and commerce:** Shopify, Liquid, Shopify Admin GraphQL, product catalogs, collection pages, structured data, local SEO<br>
+**Delivery:** Git, GitHub, GitHub Actions CI, Netlify, Render, EAS builds, Vitest, Node test runner, sitemap and robots setup
 
 ## Selected Work
 
@@ -57,9 +54,9 @@ Local service website for a Hamilton-area exterior cleaning business focused on 
 
 ## Additional Projects
 
-Chatter: React/Vite and Capacitor app with an Express/OpenAI backend for coaching, local speech capture, haptics, and transcript handling.  
-Chatter Mobile: Expo React Native prototype for call coaching, tablet/mobile/web layouts, speech output, and negotiation guidance.  
-Habit Tracker: Next.js and Supabase habit tracker with RLS, anonymous/email identity, owner-key isolation, drag-and-drop ordering, charts, and Stripe integration.  
-Daily 60 Base44 PWA: React/Vite habit product with Base44 auth/database/functions, Claude integration, Stripe premium purchase flow, notifications, Resend email, and achievements.  
-Maze Generator: Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.  
-Volume Booster: Native Android project using Kotlin, Gradle, AndroidX, AppCompat, Material components, and packaged app configuration.
+**Chatter:** React/Vite and Capacitor app with an Express/OpenAI backend for coaching, local speech capture, haptics, and transcript handling.<br>
+**Chatter Mobile:** Expo React Native prototype for call coaching, tablet/mobile/web layouts, speech output, and negotiation guidance.<br>
+**Habit Tracker:** Next.js and Supabase habit tracker with RLS, anonymous/email identity, owner-key isolation, drag-and-drop ordering, charts, and Stripe integration.<br>
+**Daily 60 Base44 PWA:** React/Vite habit product with Base44 auth/database/functions, Claude integration, Stripe premium purchase flow, notifications, Resend email, and achievements.<br>
+**Maze Generator:** Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.<br>
+**Volume Booster:** Native Android project using Kotlin, Gradle, AndroidX, AppCompat, Material components, and packaged app configuration.
