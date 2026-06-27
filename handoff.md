@@ -46,7 +46,7 @@ Zack asked why he wasn't getting interviews and whether to add years-per-field. 
 - **Level-neutral positioning (`88f4696`).** Per Zack, removed all explicit "junior / entry-level" labels from resume + site so the work and dated timeline set the level rather than capping it. Now reads "open to full-stack developer roles." The 2024–Present dates stay (honest, not a cap).
 - **Cover letter / outreach copy added (`Cover_Letter.md`).** Reusable templates: one-liner/headline, outreach blurb (LinkedIn/cold email), full cover-letter template with [BRACKET] placeholders, a LinkedIn About, and a pre-send checklist. Not linked from the site (reference doc for Zack).
 
-**Biggest remaining content gap: real metrics.** Every project bullet describes *what was built*, not *what it changed*. No invented numbers were added. If Zack supplies real figures (Luxury Solutions quote requests, Kakebo traffic/sales, Daily 60 testers), fold them into both `index.html` project cards and the resume — this is the highest-impact improvement left.
+**On metrics:** Zack has **declined** to add real outcome numbers — client figures are confidential (NDA) and his own usage data is personal. Do **not** add metrics or nudge him for them. Scope/capability framing (RLS policies, server-side AI key, Play Store closed testing, one-click demo) is the agreed proof. Never invent numbers.
 
 ## Important notes for Codex
 
@@ -61,7 +61,7 @@ Zack asked why he wasn't getting interviews and whether to add years-per-field. 
 
 Ordered by priority.
 
-- [ ] **HIGH (needs Zack) — Add real outcome metrics.** The single biggest remaining improvement. Every project bullet on the site + resume describes *what was built*, not *what it changed*. Once Zack provides real numbers (Luxury Solutions quote requests, Kakebo traffic/sales, Daily 60 testers/installs, FinTrack usage), work them into the `index.html` project cards AND `Zack_Wilde_Resume.md` + `resume/resume.html`, then regenerate the PDF. Do **not** invent numbers.
+- [x] **DECLINED — Real outcome metrics.** Zack will not add numbers (client data is under NDA; personal usage is private). Do not pursue or nudge. Capability/scope framing is the agreed proof. See "On metrics" in the fourth pass.
 - [x] **CONSIDERED — Daily 60 demo uses canned AI responses.** Keep the mocked `lib/api.web.ts` path. The real backend needs a secret that cannot ship publicly, and a live proxy would add cost and abuse risk. This is acceptable for a portfolio demo; only revisit if Zack explicitly wants to pay for and maintain a rate-limited proxy.
 
 ### Codex follow-up
