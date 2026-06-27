@@ -2,11 +2,11 @@
 
 **Full-Stack Developer**
 
-zackwilde-dev.netlify.app | zackwildebusiness@gmail.com | github.com/zackwildebusiness-glitch | linkedin.com/in/zachary-wilde-5b82222b8
+Remote · Canada | zackwilde-dev.netlify.app | zackwildebusiness@gmail.com | github.com/zackwildebusiness-glitch | linkedin.com/in/zachary-wilde-5b82222b8
 
 ## Summary
 
-Full-stack developer working across React, React Native, Expo, Node/Express, Shopify, Supabase, and static business websites. I build practical apps and websites with clear flows, working data handling, deployment setup, and enough testing or review to hand off without extra cleanup.
+Full-stack developer who has shipped real web and mobile products end to end since 2024 — React and React Native frontends, Node/Express and Supabase backends, and live Shopify and business websites. Comfortable owning a feature from data model to deployment, with CI and tests in place. Open to junior and entry-level full-stack roles (remote).
 
 ## Skills
 
@@ -15,7 +15,16 @@ Full-stack developer working across React, React Native, Expo, Node/Express, Sho
 **Websites and commerce:** Shopify, Liquid, Shopify Admin GraphQL, product catalogs, collection pages, structured data, local SEO<br>
 **Delivery:** Git, GitHub, GitHub Actions CI, Netlify, Render, EAS builds, Vitest, Node test runner, sitemap and robots setup
 
-## Selected Work
+## Experience
+
+### Freelance & Independent Full-Stack Developer
+*Remote · 2024–Present*
+
+- Built and delivered a client website for Luxury Solutions, a Hamilton-area exterior-cleaning business — responsive service pages, a quote-request flow, testimonials, local SEO, and deployment.
+- Independently designed, built, and shipped four full-stack products end to end — Daily 60, FinTrack, Kakebo Shop, and Wilde Digital (detailed below) — owning the UI, API, data model, and deployment for each.
+- Set up CI, automated tests, and deploy pipelines across the stack (GitHub Actions, Vitest, Netlify, Render, EAS) so each project ships clean and stays reproducible.
+
+## Selected Projects
 
 ### Daily 60
 *Mobile app · AI backend*
@@ -50,7 +59,7 @@ Static service website with project pages, service pages, an ROI calculator, lea
 - Added ROI calculator logic, lead qualification, CRM status tracking, CSV export, local persistence, and fallback email flows.
 
 ### Luxury Solutions
-*Local service site*
+*Local service site · client work*
 
 Local service website for a Hamilton-area exterior cleaning business focused on quote requests, trust signals, and local SEO.
 
@@ -62,6 +71,8 @@ Local service website for a Hamilton-area exterior cleaning business focused on 
 **Chatter:** React/Vite and Capacitor app with an Express/OpenAI backend for coaching, local speech capture, haptics, and transcript handling.<br>
 **Chatter Mobile:** Expo React Native prototype for call coaching, tablet/mobile/web layouts, speech output, and negotiation guidance.<br>
 **Habit Tracker:** Next.js and Supabase habit tracker with RLS, anonymous/email identity, owner-key isolation, drag-and-drop ordering, charts, and Stripe integration.<br>
-**Daily 60 Base44 PWA:** React/Vite habit product with Base44 auth/database/functions, Claude integration, Stripe premium purchase flow, notifications, Resend email, and achievements.<br>
-**Maze Generator:** Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.<br>
-**Volume Booster:** Native Android project using Kotlin, Gradle, AndroidX, AppCompat, Material components, and packaged app configuration.
+**Maze Generator:** Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.
+
+## Education
+
+**freeCodeCamp** — Full-stack web development certification track, 2024
