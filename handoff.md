@@ -37,6 +37,17 @@ Triggered by Zack asking "why is the update not pushed to Netlify." Root cause +
 - **Category screen compacted.** Zack disliked having to scroll on the create/category screen. Replaced the viewport-scaling `aspectRatio` cards with fixed-height (118px) cards, tightened the header, and centered the content in a 480px max-width column. Verified no scroll at 1366×768 and 390×844. Portfolio commit `93c2002`.
 - **Daily 60 source changes are in the separate `D:\Apps\Daily Sixty` repo**, committed **locally only** (`e03d581` web support, `1d833fe` category) — **not pushed** to that repo's remote, since it has unrelated pre-existing uncommitted work I left alone.
 
+## Fourth pass (Claude) — job-readiness (resume + site repositioning)
+
+Zack asked why he wasn't getting interviews and whether to add years-per-field. Diagnosis: the resume was projects-only with **no employment history, no dates, no education, no location** — to a recruiter it read as zero professional experience. Confirmed facts with Zack: started dev work **mid/late 2024** (~1 yr), **freeCodeCamp** trained, **remote (Canada)**, Kakebo + Wilde Digital are his own products, **Luxury Solutions was real client work**.
+
+- **Resume restructured for applications (`02471f7`).** Added a dated **Experience** section (*Freelance & Independent Full-Stack Developer, 2024–Present*) framing the Luxury Solutions client work + the independent products as real, timelined work; added an **Education** line (freeCodeCamp), **Remote · Canada** location, and a summary that leads with shipped proof. Dropped the two weakest Additional Projects (Volume Booster, the duplicate Daily 60 Base44 PWA) and tightened CSS density so the PDF stays **one page** (verified by page-count + on-screen overflow measurement). md / html / pdf kept in parity.
+- **Site reframed employer-facing (`68db25a`).** Flipped the homepage from a freelance pitch to a job-seeker portfolio: hero now leads with "Open to work" + a candidate summary, secondary CTA is **Download Resume**, highlight chips signal remote/stack. Renamed the Services section + nav to "What I do"; rewrote the contact section; updated meta/social descriptions.
+- **Level-neutral positioning (`88f4696`).** Per Zack, removed all explicit "junior / entry-level" labels from resume + site so the work and dated timeline set the level rather than capping it. Now reads "open to full-stack developer roles." The 2024–Present dates stay (honest, not a cap).
+- **Cover letter / outreach copy added (`Cover_Letter.md`).** Reusable templates: one-liner/headline, outreach blurb (LinkedIn/cold email), full cover-letter template with [BRACKET] placeholders, a LinkedIn About, and a pre-send checklist. Not linked from the site (reference doc for Zack).
+
+**Biggest remaining content gap: real metrics.** Every project bullet describes *what was built*, not *what it changed*. No invented numbers were added. If Zack supplies real figures (Luxury Solutions quote requests, Kakebo traffic/sales, Daily 60 testers), fold them into both `index.html` project cards and the resume — this is the highest-impact improvement left.
+
 ## Important notes for Codex
 
 - **Deploys are via the Netlify CLI, NOT git.** `git push` does not update the live site. After committing/pushing, you MUST run `npx netlify deploy --prod --dir .` from the repo root to publish. The CLI is authed as zackwildebusiness@gmail.com and linked via `.netlify/state.json` (gitignored).
@@ -44,12 +55,13 @@ Triggered by Zack asking "why is the update not pushed to Netlify." Root cause +
 - **The domain is `zackwilde-dev.netlify.app`. Do NOT reintroduce `zackwilde.dev` as a URL anywhere.**
 - **Do not change the LinkedIn or GitHub URLs.** `linkedin.com/in/zachary-wilde-5b82222b8` and `github.com/zackwildebusiness-glitch` are Zack's real, confirmed profiles. Leave as-is.
 - **Keep resume and portfolio in parity.** If you touch a claim in `index.html`, mirror it in `Zack_Wilde_Resume.md` + `resume/resume.html`, then regenerate the PDF: `powershell -ExecutionPolicy Bypass -File resume/build.ps1`.
-- `main` is at `93c2002`, pushed and deployed. Current portfolio commit chain this session: `b15aa94` (passes 1–2) → `1f7ffad` (Daily 60 demo) → `93c2002` (category compact).
+- `main` is at `88f4696`, pushed and deployed (job-readiness work to be committed on top with the cover letter + this handoff). Recent chain: `b15aa94` (passes 1–2) → `1f7ffad` (Daily 60 demo) → `93c2002` (category) → `820554c` (Codex: og-image + FinTrack reconcile) → `02471f7` (resume restructure) → `68db25a` (site employer-facing) → `88f4696` (level-neutral).
 
 ## Checklist — what's left
 
 Ordered by priority.
 
+- [ ] **HIGH (needs Zack) — Add real outcome metrics.** The single biggest remaining improvement. Every project bullet on the site + resume describes *what was built*, not *what it changed*. Once Zack provides real numbers (Luxury Solutions quote requests, Kakebo traffic/sales, Daily 60 testers/installs, FinTrack usage), work them into the `index.html` project cards AND `Zack_Wilde_Resume.md` + `resume/resume.html`, then regenerate the PDF. Do **not** invent numbers.
 - [ ] **CONSIDER — Daily 60 demo uses canned AI responses.** The web demo's plan/action/reflection text is mocked (`lib/api.web.ts`), lightly goal-aware but not real model output — the right call, since the real backend needs a secret that can't ship publicly. Fine for a portfolio demo (FinTrack runs on seeded data too). Only revisit if Zack wants genuinely live AI in the demo, which would require a public, rate-limited proxy (added cost/abuse risk — not recommended).
 
 ### Codex follow-up
@@ -86,6 +98,7 @@ Ordered by priority.
 - `assets/` — project screenshots, `og-image.png`, `favicon.svg`.
 - `resume/resume.html` + `resume/build.ps1` — committed, reproducible resume source. Run the script to regenerate `Zack_Wilde_Resume.pdf`.
 - `Zack_Wilde_Resume.md` / `.pdf` — resume linked from nav and contact card.
+- `Cover_Letter.md` — reusable cover letter + outreach/LinkedIn copy for Zack's job search (not linked from the site).
 - `sitemap.xml`, `robots.txt`, `netlify.toml` — deploy/SEO config (SPA redirects for both demos live here).
 - `demos/fintrack/` — built FinTrack SPA (source: `D:\Apps\Finance Dashboard`).
 - `demos/daily60/` — built Daily 60 Expo web export (source: `D:\Apps\Daily Sixty\mobile`). Rebuild steps are in the checklist.
