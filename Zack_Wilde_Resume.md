@@ -72,7 +72,3 @@ Local service website for a Hamilton-area exterior cleaning business focused on 
 **Chatter Mobile:** Expo React Native prototype for call coaching, tablet/mobile/web layouts, speech output, and negotiation guidance.<br>
 **Habit Tracker:** Next.js and Supabase habit tracker with RLS, anonymous/email identity, owner-key isolation, drag-and-drop ordering, charts, and Stripe integration.<br>
 **Maze Generator:** Single-file Three.js browser game with procedural maze generation, top-down preview, first-person controls, collision handling, and BFS enemy pathfinding.
-
-## Education
-
-**freeCodeCamp** — Full-stack web development certification track, 2024
