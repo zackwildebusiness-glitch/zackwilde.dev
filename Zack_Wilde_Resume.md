@@ -6,7 +6,7 @@ Remote · Canada | zackwilde-dev.netlify.app | zackwildebusiness@gmail.com | git
 
 ## Summary
 
-Full-stack developer who has shipped real web and mobile products end to end since 2024 — React and React Native frontends, Node/Express and Supabase backends, and live Shopify and business websites. Comfortable owning a feature from data model to deployment, with CI and tests in place. Open to junior and entry-level full-stack roles (remote).
+Full-stack developer who has shipped real web and mobile products end to end since 2024 — React and React Native frontends, Node/Express and Supabase backends, and live Shopify and business websites. Comfortable owning a feature from data model to deployment, with CI and tests in place. Open to full-stack developer roles (remote).
 
 ## Skills
 
