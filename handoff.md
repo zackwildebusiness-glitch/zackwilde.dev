@@ -62,7 +62,7 @@ Zack asked why he wasn't getting interviews and whether to add years-per-field. 
 Ordered by priority.
 
 - [ ] **HIGH (needs Zack) — Add real outcome metrics.** The single biggest remaining improvement. Every project bullet on the site + resume describes *what was built*, not *what it changed*. Once Zack provides real numbers (Luxury Solutions quote requests, Kakebo traffic/sales, Daily 60 testers/installs, FinTrack usage), work them into the `index.html` project cards AND `Zack_Wilde_Resume.md` + `resume/resume.html`, then regenerate the PDF. Do **not** invent numbers.
-- [ ] **CONSIDER — Daily 60 demo uses canned AI responses.** The web demo's plan/action/reflection text is mocked (`lib/api.web.ts`), lightly goal-aware but not real model output — the right call, since the real backend needs a secret that can't ship publicly. Fine for a portfolio demo (FinTrack runs on seeded data too). Only revisit if Zack wants genuinely live AI in the demo, which would require a public, rate-limited proxy (added cost/abuse risk — not recommended).
+- [x] **CONSIDERED — Daily 60 demo uses canned AI responses.** Keep the mocked `lib/api.web.ts` path. The real backend needs a secret that cannot ship publicly, and a live proxy would add cost and abuse risk. This is acceptable for a portfolio demo; only revisit if Zack explicitly wants to pay for and maintain a rate-limited proxy.
 
 ### Codex follow-up
 
@@ -70,7 +70,7 @@ Ordered by priority.
 - [x] **OG image regenerated** — `assets/og-image.png` is 1200×630 and uses `zackwilde-dev.netlify.app`, "Full-Stack Developer", the ZW mark, requested colors, and tech chips.
 - [x] **Resume PDF raster spot-check** — rendered `Zack_Wilde_Resume.pdf` page 1 with PyMuPDF at 2× scale; it is one page, fonts render, rust labels render, and the FinTrack/Daily 60 bullets fit.
 - [x] **FinTrack source basename checked** — `D:\Apps\Finance Dashboard\src\main.jsx` contains `basename={import.meta.env.BASE_URL}`. That repo remains intentionally uncommitted because it has a much larger dirty source tree.
-- [ ] **Optional external repo push still open** — `D:\Apps\Daily Sixty` is ahead of `origin/master` by 3 commits and also has unrelated dirty files. Push only after deciding those local app-repo commits should be published.
+- [x] **Daily Sixty app-repo commits pushed** — pushed `bea9107`, `e03d581`, and `1d833fe` to `origin/master` in `D:\Apps\Daily Sixty`. That repo still has unrelated dirty/untracked files, but the committed web-demo work is now on GitHub.
 
 ### Done (do not redo)
 
